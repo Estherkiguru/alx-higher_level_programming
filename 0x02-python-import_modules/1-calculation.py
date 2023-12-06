@@ -15,4 +15,3 @@ if __name__ == "__main__":
     print("{} - {} = {}".format(a, b, sub_sol))
     print("{} * {} = {}".format(a, b, mul_sol))
     print("{} / {} = {}".format(a, b, div_sol))
-
