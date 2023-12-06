@@ -7,4 +7,4 @@ if __name__ == "__main__":
 
     for arg in argv[1:]:
         tot_sum += int(arg)
-    print (tot_sum)
+    print(tot_sum)
