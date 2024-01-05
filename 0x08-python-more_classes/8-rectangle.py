@@ -81,3 +81,12 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
 
         return rect_1 if rect_1.area() >= rect_2.area() else rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Creates a square with equal width and height"""
+        if type(size) is not int:
+            raise TypeError("width must be an integer")
+        if size < 0:
+            raise ValueError("width must be >= 0")
+        return cls(size, size)
