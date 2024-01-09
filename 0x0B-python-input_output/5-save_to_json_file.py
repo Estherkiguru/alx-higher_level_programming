@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """Saving an object to a file"""
 
 
