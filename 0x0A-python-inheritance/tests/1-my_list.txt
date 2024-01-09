@@ -1,0 +1,12 @@
+# Test for normal list
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
+[1, 2, 3]
+
+# Test for empty list
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
