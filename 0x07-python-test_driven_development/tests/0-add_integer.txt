@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+"""
+test cases for task 0, add_integer module
+"""
+
+Import the function from the module:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+test case 1:two arguments
+
+>>> add_integer(1, 2)
+3
+
+test case 2:test one negative integer
+
+>>> add_integer(1, -2)
+0
+
+test case 3:float argument
+
+>>> add_integer(1.4, 2)
+3.4
+
+test case 4:
