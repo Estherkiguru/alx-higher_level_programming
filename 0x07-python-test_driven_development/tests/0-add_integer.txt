@@ -1,22 +1,39 @@
-"""
 test cases for task 0, add_integer module
-"""
 
 Import the function from the module:
 >>> add_integer = __import__('0-add_integer').add_integer
 
-test case 1:two arguments
+test case 1 int argument:
+
+>>> add_integer(5)
+103
+
+test case 2 test one float:
+
+>>> add_integer(12.5)
+110.5
+
+test case 3 negative float
+
+>>> add_integer(-15.5)
+82.5
+
+test case 4:two arguments
 
 >>> add_integer(1, 2)
 3
 
-test case 2:test one negative integer
+test case 5:test one negative integer
 
 >>> add_integer(1, -2)
 0
 
-test case 3:float argument
+test case 6:float argument
 
 >>> add_integer(1.4, 2)
 3.4
 
+test case 7 extreme values
+
+>>> add_integer(99999999, 99999998)
+199999997
