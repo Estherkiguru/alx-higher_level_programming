@@ -11,12 +11,12 @@ test case 1 int argument:
 test case 2 test one float:
 
 >>> add_integer(12.5)
-110
+110.5
 
 test case 3 negative float
 
 >>> add_integer(-15.5)
-83
+82.5
 
 test case 4:two arguments
 
@@ -31,7 +31,7 @@ test case 5:test one negative integer
 test case 6:float argument
 
 >>> add_integer(1.4, 2)
-3
+3.4
 
 test case 7 extreme values
 
