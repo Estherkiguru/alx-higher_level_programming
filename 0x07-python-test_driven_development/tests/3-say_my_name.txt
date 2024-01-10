@@ -1,0 +1,33 @@
+# Test case 1: First name and last name provided
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test case 2: Only first name provided
+>>> say_my_name("Walter")
+My name is Walter
+
+# Test case 3: No names provided
+>>> say_my_name()
+My name is 
+
+# Test case 4: First name is an integer (raises TypeError)
+>>> try:
+...     say_my_name(12, "White")
+... except TypeError as e:
+...     print(e)
+first_name must be a string or last_name must be a string
+
+# Test case 5: Last name is an integer (raises TypeError)
+>>> try:
+...     say_my_name("John", 42)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
+# Test case 6: Both names are integers (raises TypeError)
+>>> try:
+...     say_my_name(12, 42)
+... except TypeError as e:
+...     print(e)
+first_name must be a string or last_name must be a string
+
