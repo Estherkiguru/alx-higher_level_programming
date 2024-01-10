@@ -15,14 +15,16 @@ division by negative test case:
 
 division by zero test case:
 >>> matrix_divided([[3, 6, 9], [12, 15, 18]], 0)
-# Expected output: ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  ...
+ZeroDivisionError: division by zero
 
 division with different number of rows test case:
 
 >>> matrix_divided([[3, 6], [12, 15, 18]], 3)
 Traceback (most recent call last):
   ...
-TypeError: matrix must have each row with the same size
+TypeError:  Each row of the matrix must have the same size
 
 division with nan test case:
 
