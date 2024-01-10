@@ -1,0 +1,33 @@
+test cases for 2-matrix_divided module
+
+Import the function from the module
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+normal matrix test case:
+
+>>> matrix_divided([[3, 6, 9], [12, 15, 18]], 3)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+division by negative test case:
+
+>>> matrix_divided([[3, 6, 9], [12, 15, 18]], -3)
+[[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+
+division by zero test case:
+>>> matrix_divided([[3, 6, 9], [12, 15, 18]], 0)
+# Expected output: ZeroDivisionError: division by zero
+
+division with different number of rows test case:
+
+>>> matrix_divided([[3, 6], [12, 15, 18]], 3)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must have each row with the same size
+
+division with nan test case:
+
+>>> matrix_divided([[3, "9"], [15, 3]], 3)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
