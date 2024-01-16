@@ -93,3 +93,23 @@ class Rectangle(Base):
         """Returns a string representation of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """updates instance attributes using keyword and positional args"""
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """method for updating instance atrributes"""
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
