@@ -72,7 +72,7 @@ class Rectangle(Base):
 
     def validate_integer(self, name, value, eq=True):
         """validate the attributes of the rectangle"""
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if eq and value <= 0:
             raise ValueError("{} must be > 0".format(name))
