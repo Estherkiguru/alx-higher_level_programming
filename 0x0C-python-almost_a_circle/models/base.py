@@ -47,7 +47,7 @@ class Base:
         from models.square import Square
         if cls is Rectangle:
             dummy_instance = Rectangle(1, 1)
-        elif cls is Squrae:
+        elif cls is Square:
             dummy_instance = Square(1)
         else:
             dummy_instance = None
