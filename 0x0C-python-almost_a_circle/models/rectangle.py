@@ -70,15 +70,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    def validate_integer(self, name, value, eq=True):
-        """validate the attributes of the rectangle"""
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
-        if eq and value <= 0:
-            raise ValueError("{} must be > 0".format(name))
-        elif not eq and value < 0:
-            raise ValueError("{} must be >= 0".format(name))
-
     def area(self):
         """returns area of the rectangle"""
         return self.width * self.height
