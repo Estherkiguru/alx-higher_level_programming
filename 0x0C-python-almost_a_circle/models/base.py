@@ -39,3 +39,17 @@ class Base:
             list_objs = [obj.to_dictionary() for obj in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(list_objs))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
+            dummy_instance = Rectangle(1, 1)
+        elif cls is Squrae:
+            dummy_instance = Square(1)
+        else:
+            dummy_instance = None
+        dummy_instance.update(**dictionary)
+        return dummy_instance
