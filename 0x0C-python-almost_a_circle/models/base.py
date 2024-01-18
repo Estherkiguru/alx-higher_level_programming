@@ -100,4 +100,4 @@ class Base:
                     d = {"id": row[0], "size": row[1],
                          "x": row[2], "y": row[3]}
                 loaded_objs.append(cls.create(**d))
-                return loaded_objs
+        return loaded_objs
