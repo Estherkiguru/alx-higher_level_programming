@@ -2,6 +2,7 @@
 """Class Base module"""
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -101,3 +102,37 @@ class Base:
                          "x": row[2], "y": row[3]}
                 loaded_objs.append(cls.create(**d))
         return loaded_objs
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draws all the rectangles and squares"""
+        turtle.Screen().bgcolor("white")
+        turtle.speed(2)
+
+        for rect in list_rectangles:
+            turtle.penup()
+            turtle.goto(rect.x, rect.y)
+            turtle.pendown()
+            for _ in range(2):
+                turtle.forward(rect.width)
+                turtle.left(90)
+                turtle.forward(rect.height)
+                turtle.left(90)
+
+        for square in list_squares:
+            turtle.penup()
+            turtle.goto(square.x, square.y)
+            turtle.pendown()
+            for _ in range(4):
+                turtle.forward(square.size)
+                turtle.left(90)
+
+        turtle.exitonclick()
+
+
+if __name__ == "__main__":
+    list_rectangles = [Rectangle(100, 40),
+                       Rectangle(90, 110, 30, 10), Rectangle(20, 25, 110, 80)]
+    list_squares = [Square(35), Square(15, 70, 50), Square(80, 30, 70)]
+
+    Base.draw(list_rectangles, list_squares)
