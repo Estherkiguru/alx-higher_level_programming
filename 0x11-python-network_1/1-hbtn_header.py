@@ -8,5 +8,6 @@ import sys
 
 
 url = sys.argv[1]
-with urllib.request.urlopen(url) as response:
+req = urllib.request.Request(url)
+with urllib.request.urlopen(req) as response:
     print(response.headers.get('X-Request-Id'))
