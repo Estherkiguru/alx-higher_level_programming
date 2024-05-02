@@ -1,0 +1,1 @@
+mocument.querySelector('header').style
